@@ -72,11 +72,11 @@ df_raw_wide_ptstt_drvd <-
   mutate(
     Screen_through_TechInstall = 
       case_when(
-        !is.na(`BL V_Pre-Visit Stability Screening_1_Date Administered`) &
+        !is.na(`Scrn V_Pre-Visit Stability Screening_1_Date Administered`) &
           !is.na(`Tech Install_Date of Installation`) ~
           time_length(
             interval(
-              start = `BL V_Pre-Visit Stability Screening_1_Date Administered`,
+              start = `Scrn V_Pre-Visit Stability Screening_1_Date Administered`,
               end = `Tech Install_Date of Installation`),
             unit = "week"
           ),
